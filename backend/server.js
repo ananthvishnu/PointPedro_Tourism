@@ -20,6 +20,10 @@ app.get('/', (req, res) => {
   res.send('Welcome to PointPedro-Tourism API!');
 });
 
+// Routes
+app.use('/api/auth', require('./routes/auth'));
+
+
 // Health check route
 app.get('/api/health', (req, res) => {
   res.status(200).json({
