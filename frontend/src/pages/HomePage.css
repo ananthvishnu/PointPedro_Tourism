@@ -8,7 +8,10 @@
 
 .hero-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(3,105,161,0.88) 0%, rgba(12,35,64,0.65) 100%);
+  /* background: linear-gradient(135deg, rgba(3,105,161,0.88) 0%, rgba(12,35,64,0.65) 100%); */
+  background-image: url('https://cdn.lakpura.com/v/1600/c/9/9/0/c/sri-lanka-northern-coastline-990c0644d6fbec2f89e84a42950ad800.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-content {

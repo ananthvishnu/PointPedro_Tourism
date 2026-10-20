@@ -24,7 +24,7 @@ export default function Navbar() {
       <div className="navbar-inner container">
         <Link to="/" className="navbar-brand" onClick={() => setMenuOpen(false)}>
           <span className="brand-icon">🐚</span>
-          <span className="brand-text">Batti<span className="brand-accent">Tourism</span></span>
+          <span className="brand-text">PointPedro<span className="brand-accent">Tourism</span></span>
         </Link>
 
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">

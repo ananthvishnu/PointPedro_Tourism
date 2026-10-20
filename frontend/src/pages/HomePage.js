@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import api from '../utils/api';
 import PlaceCard from '../components/PlaceCard';
-import Plasma from '../components/Plasma';
+// import Plasma from '../components/Plasma';
 import './HomePage.css';
 
 
@@ -39,7 +39,7 @@ return (
       <section className="hero" style={{ position: 'relative', overflow: 'hidden' }}>
 
         {/* Plasma Animation Background */}
-        <div style={{
+        {/* <div style={{
           position: 'absolute',
           top: 0, left: 0,
           width: '100%',
@@ -53,16 +53,16 @@ return (
             scale={1}
             mouseInteractive={true}
           />
-        </div>
+        </div> */}
 
         {/* Dark overlay so text is readable */}
         <div className="hero-overlay" style={{ zIndex: 1 }} />
 
         {/* Hero Content */}
         <div className="hero-content container" style={{ position: 'relative', zIndex: 2 }}>
-          <p className="hero-eyebrow">Discover the Pearl of the East</p>
-          <h1 className="hero-title">Explore <em>Batticaloa</em></h1>
-          <p className="hero-subtitle">Plan your perfect one-day tour through Sri Lanka's most enchanting eastern coastal city.</p>
+          <p className="hero-eyebrow">Discover the Pearl of the North</p>
+          <h1 className="hero-title">Explore <em>PointPedro</em></h1>
+          <p className="hero-subtitle">Plan your perfect one-day tour through Sri Lanka's most enchanting notern coastal city.</p>
           <form className="hero-search" onSubmit={handleSearch}>
             <input
               type="text"
