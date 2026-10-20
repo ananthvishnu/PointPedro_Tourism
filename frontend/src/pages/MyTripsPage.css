@@ -1,0 +1,214 @@
+.trips-hero {
+  background: linear-gradient(135deg, var(--teal), #0369a1);
+  color: var(--white);
+  padding: 2.5rem 0;
+}
+.trips-hero h1 { font-family: var(--font-display); font-size: 2rem; margin-bottom: 0.35rem; }
+.trips-hero p { color: rgba(255,255,255,0.8); margin-bottom: 1.25rem; }
+
+.trips-content { padding: 2.5rem 0 4rem; }
+.trips-list { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.trip-card { padding: 1.5rem; }
+.trip-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; }
+.trip-card-header h3 { font-family: var(--font-display); font-size: 1.25rem; color: var(--teal); margin-bottom: 0.25rem; }
+.trip-date { color: var(--gray); font-size: 0.88rem; }
+
+.trip-stats-row { display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: 0.85rem; color: var(--gray); margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--light-gray); }
+
+.trip-places-list { display: flex; flex-direction: column; gap: 0.5rem; }
+.trip-place-item { display: flex; align-items: center; gap: 0.65rem; padding: 0.6rem 0.75rem; background: var(--light-gray); border-radius: 8px; }
+.tp-num { width: 24px; height: 24px; min-width: 24px; background: var(--deep-green); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; }
+.tp-name { font-weight: 600; font-size: 0.9rem; color: var(--dark); flex: 1; }
+.tp-name:hover { color: var(--teal); }
+.tp-time { color: var(--gray); font-size: 0.8rem; margin-left: auto; }
+
+.trip-notes { margin-top: 0.75rem; font-size: 0.88rem; color: var(--gray); font-style: italic; }
+
+/* Map Modal Styles */
+.map-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.map-modal {
+  background: var(--white);
+  border-radius: var(--radius);
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.map-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--light-gray);
+  flex-shrink: 0;
+}
+
+.map-modal-header h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--teal);
+  margin: 0;
+}
+
+.map-modal-content {
+  padding: 1.5rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.map-modal iframe {
+  border-radius: var(--radius);
+}
+
+@media (max-width: 1024px) {
+  .trip-card { padding: 1.25rem; }
+}
+
+@media (max-width: 768px) {
+  .trips-hero { padding: 2rem 0; }
+  .trips-hero h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+  .trips-hero p { font-size: 0.9rem; margin-bottom: 1rem; }
+  
+  .trips-content { padding: 1.5rem 0 2.5rem; }
+  .trip-card { padding: 1.1rem; }
+  .trip-card-header { flex-direction: column; gap: 0.5rem; }
+  .trip-card-header h3 { margin-bottom: 0.15rem; }
+  .trip-date { font-size: 0.8rem; }
+  
+  .trip-stats-row { gap: 0.75rem; font-size: 0.8rem; margin-bottom: 0.75rem; padding-bottom: 0.75rem; }
+  .trip-places-list { gap: 0.4rem; }
+  .trip-place-item { gap: 0.5rem; padding: 0.5rem 0.6rem; }
+  .tp-name { font-size: 0.85rem; }
+  .tp-time { font-size: 0.75rem; }
+
+  .map-modal {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+  
+  .map-modal-header h2 {
+    font-size: 1.25rem;
+  }
+  
+  .map-modal-header {
+    padding: 1.25rem;
+  }
+  
+  .map-modal-content {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .trips-hero { padding: 1.5rem 0; }
+  .trips-hero h1 { font-size: 1.25rem; }
+  
+  .trips-content { padding: 1.25rem 0 2rem; }
+  .trip-card { padding: 0.9rem; }
+  .trip-card-header { gap: 0.4rem; }
+  .trip-card-header h3 { font-size: 1.05rem; }
+  
+  .trip-stats-row { 
+    gap: 0.5rem; 
+    font-size: 0.75rem; 
+    margin-bottom: 0.6rem; 
+    padding-bottom: 0.6rem; 
+    flex-direction: column;
+  }
+  
+  .trip-places-list { gap: 0.35rem; }
+  .trip-place-item { 
+    gap: 0.4rem; 
+    padding: 0.45rem 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .tp-num { 
+    width: 22px; 
+    height: 22px; 
+    font-size: 0.7rem; 
+  }
+  
+  .tp-name { 
+    font-size: 0.8rem;
+    flex: none;
+    min-width: 0;
+  }
+  
+  .trip-place-item .badge {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+  
+  .tp-time { 
+    font-size: 0.7rem;
+    margin-left: 0;
+  }
+  
+  .trip-notes { font-size: 0.8rem; margin-top: 0.5rem; }
+  
+  .map-modal-header h2 {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .trips-hero { padding: 1.25rem 0; }
+  .trips-hero h1 { font-size: 1.1rem; }
+  
+  .trip-card { padding: 0.75rem; }
+  .trip-card-header h3 { font-size: 0.95rem; }
+  
+  .trip-stats-row { 
+    gap: 0.3rem;
+    font-size: 0.7rem;
+  }
+  
+  .trip-place-item {
+    gap: 0.35rem;
+    padding: 0.4rem 0.45rem;
+  }
+  
+  .map-modal {
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+  
+  .map-modal-header {
+    padding: 1rem;
+  }
+  
+  .map-modal-content {
+    padding: 1rem;
+  }
+}

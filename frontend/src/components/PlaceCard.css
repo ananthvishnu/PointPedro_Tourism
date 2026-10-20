@@ -1,0 +1,99 @@
+.place-card { display: flex; flex-direction: column; height: 100%; }
+.place-card-link { flex: 1; display: flex; flex-direction: column; }
+
+.place-card-img-wrap {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background: var(--light-gray);
+}
+.place-card-img-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.place-card:hover .place-card-img-wrap img { transform: scale(1.05); }
+
+.place-category-badge { position: absolute; top: 12px; left: 12px; }
+
+.fee-badge {
+  position: absolute; top: 12px; right: 12px;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.fee-badge.free { background: #d1fae5; color: #065f46; }
+.fee-badge.paid { background: #fef3c7; color: #92400e; }
+
+.place-card-body { padding: 1.1rem 1.1rem 0.75rem; flex: 1; }
+
+.place-card-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 0.35rem;
+  line-height: 1.3;
+}
+
+.place-card-desc {
+  font-size: 0.84rem;
+  color: var(--gray);
+  line-height: 1.5;
+  margin-bottom: 0.6rem;
+}
+
+.place-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--gray);
+  margin-bottom: 0.35rem;
+  flex-wrap: wrap;
+}
+.meta-time { margin-left: auto; }
+
+.place-card-hours {
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+
+.place-card-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem 1.1rem 1.1rem;
+  border-top: 1px solid var(--light-gray);
+}
+.place-card-actions .btn { flex: 1; justify-content: center; }
+
+@media (max-width: 768px) {
+  .place-card-img-wrap { height: 180px; }
+  .place-card-body { padding: 0.9rem 0.9rem 0.6rem; }
+  .place-card-title { font-size: 1rem; margin-bottom: 0.25rem; }
+  .place-card-desc { font-size: 0.8rem; margin-bottom: 0.5rem; }
+  .place-card-meta { font-size: 0.75rem; gap: 0.4rem; }
+  .place-card-hours { font-size: 0.75rem; }
+  .place-card-actions { gap: 0.4rem; padding: 0.6rem 0.9rem 0.9rem; }
+}
+
+@media (max-width: 600px) {
+  .place-card-img-wrap { height: 160px; }
+  .place-card-body { padding: 0.8rem 0.8rem 0.5rem; }
+  .place-card-title { font-size: 0.95rem; }
+  .place-card-desc { font-size: 0.75rem; margin-bottom: 0.4rem; }
+  .place-card-meta { font-size: 0.7rem; gap: 0.3rem; }
+  .fee-badge { font-size: 0.65rem; padding: 0.2rem 0.5rem; top: 8px; right: 8px; }
+  .place-category-badge { top: 8px; left: 8px; }
+  .place-card-actions { gap: 0.35rem; padding: 0.5rem 0.8rem 0.8rem; }
+}
+
+@media (max-width: 400px) {
+  .place-card-img-wrap { height: 140px; }
+  .place-card-body { padding: 0.7rem 0.7rem 0.45rem; }
+  .place-card-title { font-size: 0.9rem; }
+  .place-card-desc { font-size: 0.7rem; }
+  .place-card-meta { font-size: 0.65rem; }
+  .place-card-actions { flex-direction: column; gap: 0.3rem; padding: 0.45rem 0.7rem 0.7rem; }
+}

@@ -1,0 +1,23 @@
+.srilanka-map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.srilanka-map-svg {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.10));
+}
+
+.batticaloa-district {
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.batticaloa-district:hover {
+  opacity: 1 !important;
+  filter: brightness(1.15);
+}
