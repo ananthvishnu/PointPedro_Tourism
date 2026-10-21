@@ -1,9 +1,10 @@
 :root {
-  --deep-green: #0369a1;
-  --teal: #0ea5e9;
-  --gold: #f97316;
+  --ocean-gradient: linear-gradient(135deg, #0C4A6E 0%, #0EA5E9 50%, #BAE6FD 100%);
+  --deep-green: #0C4A6E;
+  --teal: #0EA5E9;
+  --gold: #E9BD72;
   --sand: #fed7aa;
-  --cream: #fef3c7;
+  --cream: #F4D7A1;
   --mocha-brown: #4a3728;
   --cream-latte: #a6a084;
   --dark: #0c2340;
@@ -27,7 +28,7 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-body);
-  background: var(--cream);
+  background: var(--sand);
   color: var(--dark);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -81,7 +82,7 @@ input, textarea, select {
   color: var(--deep-green);
   border: 1px solid var(--gold);
 }
-.btn-secondary:hover { background: var(--gold); color: var(--white); }
+.btn-secondary:hover { background: var(--cream); color: var(--white); }
 
 .btn-danger {
   background: #fee2e2;

@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import api from '../utils/api';
 import PlaceCard from '../components/PlaceCard';
-// import Plasma from '../components/Plasma';
 import './HomePage.css';
-
+import HeroVideoCarousel from './videoCarousel';
 
 const CATEGORIES = [
   { key: 'beach', label: 'Beaches', icon: '🏖️' },
@@ -38,31 +37,16 @@ return (
       {/* Hero */}
       <section className="hero" style={{ position: 'relative', overflow: 'hidden' }}>
 
-        {/* Plasma Animation Background */}
-        {/* <div style={{
-          position: 'absolute',
-          top: 0, left: 0,
-          width: '100%',
-          height: '100%',
-          zIndex: 0
-        }}>
-          <Plasma
-            color="#1a6b4a"
-            speed={1}
-            opacity={0.8}
-            scale={1}
-            mouseInteractive={true}
-          />
-        </div> */}
-
+   {/*Add video automatic loop carosel add here*/}
+<HeroVideoCarousel />
         {/* Dark overlay so text is readable */}
         <div className="hero-overlay" style={{ zIndex: 1 }} />
 
         {/* Hero Content */}
         <div className="hero-content container" style={{ position: 'relative', zIndex: 2 }}>
-          <p className="hero-eyebrow">Discover the Pearl of the North</p>
+          <p className="hero-eyebrow">Discover the Untouched Beauty of Sri Lanka’s North</p>
           <h1 className="hero-title">Explore <em>PointPedro</em></h1>
-          <p className="hero-subtitle">Plan your perfect one-day tour through Sri Lanka's most enchanting notern coastal city.</p>
+          <p className="hero-subtitle">Experience sacred temples, historic landmarks, local traditions, and unforgettable coastal views.</p>
           <form className="hero-search" onSubmit={handleSearch}>
             <input
               type="text"
@@ -121,8 +105,8 @@ return (
       {/* CTA */}
       <section className="cta-section">
         <div className="container cta-inner">
-          <h2>Ready to Explore Batticaloa?</h2>
-          <p>Use our Trip Planner to build your perfect day itinerary with travel time estimates.</p>
+          <h2>Ready to Discover Point Pedro?</h2>
+          <p>Explore Point Pedro’s beautiful beaches, iconic lighthouse, and rich heritage. Your adventure starts here!</p>
           <Link to="/trip-planner" className="btn btn-primary btn-lg">Start Planning →</Link>
         </div>
       </section>

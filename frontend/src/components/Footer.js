@@ -7,7 +7,13 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-inner">
         <div className="footer-brand">
-          <span className="footer-logo">🐚 Batti<span>Tourism</span></span>
+          <span className="footer-logo">
+             <img
+    src="/images/pointpedro-logo.png"
+    alt="PointPedro Tourism Logo"
+    className="brand-logo"
+  />
+             PointPedro<span>Tourism</span></span>
           <p>Your trusted guide to exploring the beautiful Batticaloa district of Sri Lanka.</p>
         </div>
         <div className="footer-links">
@@ -27,11 +33,11 @@ export default function Footer() {
           <h4>About</h4>
           <p>Built for ITE2953 – Programming Group Project</p>
           <p>University of Moratuwa</p>
-          <p style={{marginTop:'0.5rem', color:'var(--gold)'}}>Batticaloa, Sri Lanka 🇱🇰</p>
+          <p style={{marginTop:'0.5rem', color:'var(--gold)'}}>Point Pedro, Sri Lanka 🇱🇰</p>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© 2026 Batti Tourism. All rights reserved.</p>
+        <p>© 2026 PointPedro Tourism. All rights reserved.</p>
       </div>
     </footer>
   );

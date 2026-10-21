@@ -1,5 +1,5 @@
 .places-hero {
-  background: linear-gradient(135deg, var(--teal), #0369a1);
+  background: var(--ocean-gradient);
   color: var(--white);
   padding: 3rem 0 2.5rem;
   text-align: center;

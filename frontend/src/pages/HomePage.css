@@ -3,26 +3,35 @@
   min-height: 580px;
   display: flex;
   align-items: center;
-  background: url('https://images.unsplash.com/photo-1567329028248-0d87e53be7b0?w=1600&q=80') center/cover no-repeat;
+  isolation: isolate;
+  overflow: hidden;
+  background: #172333;
 }
 
 .hero-overlay {
-  position: absolute; inset: 0;
-  /* background: linear-gradient(135deg, rgba(3,105,161,0.88) 0%, rgba(12,35,64,0.65) 100%); */
-  background-image: url('https://cdn.lakpura.com/v/1600/c/9/9/0/c/sri-lanka-northern-coastline-990c0644d6fbec2f89e84a42950ad800.jpg');
-  background-size: cover;
-  background-position: center;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    110deg,
+    rgba(28, 22, 35, 0.35),
+    rgba(20, 31, 48, 0.10)
+  );
 }
 
 .hero-content {
   position: relative;
-  z-index: 1;
-  padding: 4rem 1.5rem;
+  z-index: 2;
+  width: 100%;
   max-width: 680px;
+  padding: 4rem 1.5rem;
 }
 
+
+
 .hero-eyebrow {
-  color: var(--gold);
+  color:  var(--sand);
   font-size: 0.9rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -37,7 +46,7 @@
   line-height: 1.15;
   margin-bottom: 1rem;
 }
-.hero-title em { color: var(--gold); font-style: italic; }
+.hero-title em { color:  var(--sand); font-style: italic; }
 
 .hero-subtitle {
   color: rgba(255,255,255,0.85);
@@ -65,7 +74,7 @@
 .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
 
 /* Stats */
-.stats-bar { background: linear-gradient(90deg, var(--deep-green) 0%, var(--teal) 100%); padding: 1.25rem 0; }
+.stats-bar { background: var(--ocean-gradient)}
 .stats-inner { display: flex; justify-content: space-around; gap: 1rem; }
 .stat { display: flex; flex-direction: column; align-items: center; gap: 0.15rem; color: rgba(255,255,255,0.8); font-size: 0.85rem; }
 .stat-num { font-family: var(--font-display); font-size: 1.5rem; color: var(--gold); font-weight: 700; }
@@ -159,7 +168,7 @@
 
 /* CTA */
 .cta-section {
-  background: linear-gradient(135deg, var(--teal), #0369a1);
+  background: var(--ocean-gradient);
   padding: 4rem 1.5rem;
   text-align: center;
 }

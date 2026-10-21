@@ -5,7 +5,7 @@ const Place = require('./models/Place');
 
 const places = [
   {
-    name: 'Kallady Beach',
+    name: 'Point Pedro Jetty',
     category: 'beach',
     description: 'A beautiful and peaceful coastal spot in Batticaloa with soft sand, calm waves and stunning sunrise views. Perfect for early morning walks or relaxing by the sea. Less crowded than most beaches, with local fishermen and boats adding to the scenic charm.',
     entranceFee: 0,

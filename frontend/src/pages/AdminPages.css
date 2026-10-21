@@ -1,7 +1,7 @@
 .admin-page { min-height: calc(100vh - 140px); }
 
 .admin-hero {
-  background: linear-gradient(135deg, #0c2340, var(--deep-green));
+  background: var(--ocean-gradient);
   color: var(--white);
   padding: 2.5rem 0;
 }

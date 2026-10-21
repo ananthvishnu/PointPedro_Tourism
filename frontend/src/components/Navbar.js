@@ -23,7 +23,11 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="navbar-inner container">
         <Link to="/" className="navbar-brand" onClick={() => setMenuOpen(false)}>
-          <span className="brand-icon">🐚</span>
+          <span className="brand-icon">   <img
+    src="/images/pointpedro-logo.png"
+    alt="PointPedro Tourism Logo"
+    className="brand-logo"
+  /> </span>
           <span className="brand-text">PointPedro<span className="brand-accent">Tourism</span></span>
         </Link>
 

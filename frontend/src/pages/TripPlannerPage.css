@@ -1,5 +1,5 @@
 .trip-hero {
-  background: linear-gradient(135deg, var(--teal), #0369a1);
+  background: var(--ocean-gradient);
   color: var(--white);
   padding: 2.5rem 0;
   text-align: center;
