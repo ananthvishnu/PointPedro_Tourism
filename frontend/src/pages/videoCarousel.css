@@ -32,8 +32,8 @@
   background-repeat: no-repeat;
 }
 
-.hero-video-shade {
-  /* position: absolute;
+/* .hero-video-shade {
+  position: absolute;
   inset: 0;
   background: linear-gradient(
     110deg,
@@ -41,8 +41,8 @@
     rgba(64, 35, 48, 0.56) 48%,
     rgba(20, 31, 48, 0.30) 100%
   );
-  pointer-events: none; */
-}
+  pointer-events: none;
+} */
 
 .hero-video-caption {
   position: absolute;
