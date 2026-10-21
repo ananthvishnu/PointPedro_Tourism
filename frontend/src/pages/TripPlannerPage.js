@@ -13,7 +13,7 @@ export default function TripPlannerPage() {
   const { user } = useAuth();
   const navigate = useNavigate();
 
-  const [tripName, setTripName] = useState('My Batticaloa Trip');
+  const [tripName, setTripName] = useState('My Point Pedro Trip');
   const [tripDate, setTripDate] = useState(new Date().toISOString().split('T')[0]);
   const [saving, setSaving] = useState(false);
 
@@ -46,7 +46,7 @@ export default function TripPlannerPage() {
       <div className="trip-hero">
         <div className="container">
           <h1>🗺️ Trip Planner</h1>
-          <p>Build your perfect one-day Batticaloa itinerary</p>
+          <p>Build your perfect one-day Point Pedro itinerary</p>
         </div>
       </div>
 

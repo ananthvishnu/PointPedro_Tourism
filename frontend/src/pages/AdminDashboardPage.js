@@ -29,7 +29,7 @@ export default function AdminDashboardPage() {
       <div className="admin-hero">
         <div className="container">
           <h1>⚙️ Admin Dashboard</h1>
-          <p>Manage the Batti Tourism platform</p>
+          <p>Manage the Point Pedro Tourism platform</p>
         </div>
       </div>
 

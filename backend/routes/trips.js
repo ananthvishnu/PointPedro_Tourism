@@ -71,7 +71,7 @@ router.post('/', protect, async (req, res) => {
 
     const trip = await Trip.create({
       user: req.user._id,
-      name: name || 'My Batticaloa Trip',
+      name: name || 'My Point Pedro Trip',
       date: date || new Date(),
       places: orderedPlaces,
       totalTravelTimeMinutes: totalTravelTime,

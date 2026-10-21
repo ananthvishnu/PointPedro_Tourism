@@ -216,7 +216,7 @@ export default function UserProfilePage() {
               <div className="empty-trips card">
                 <div className="empty-icon">🗺️</div>
                 <h3>No Trips Yet</h3>
-                <p>Start planning your Batticaloa adventure today!</p>
+                <p>Start planning your Point Pedro adventure today!</p>
                 <Link to="/trip-planner" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>
                   Plan Your First Trip
                 </Link>

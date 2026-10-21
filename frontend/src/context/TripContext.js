@@ -9,9 +9,9 @@ export function TripProvider({ children }) {
 
   // Initialize trip from localStorage only if user is logged in
   useEffect(() => {
-    const token = localStorage.getItem('batti_token');
+    const token = localStorage.getItem('PPT_token');
     if (token) {
-      const savedTrip = localStorage.getItem('batti_trip');
+      const savedTrip = localStorage.getItem('PPT_trip');
       if (savedTrip) {
         try {
           setTripItems(JSON.parse(savedTrip));
@@ -28,7 +28,7 @@ export function TripProvider({ children }) {
   useEffect(() => {
     const handleLogout = () => {
       setTripItems([]);
-      localStorage.removeItem('batti_trip');
+      localStorage.removeItem('PPT_trip');
     };
     
     window.addEventListener('logout', handleLogout);
@@ -39,17 +39,17 @@ export function TripProvider({ children }) {
   useEffect(() => {
     if (!user) {
       setTripItems([]);
-      localStorage.removeItem('batti_trip');
+      localStorage.removeItem('PPT_trip');
     }
   }, [user]);
 
   // Persist trip to localStorage
   useEffect(() => {
-    const token = localStorage.getItem('batti_token');
+    const token = localStorage.getItem('PPT_token');
     if (token && tripItems.length > 0) {
-      localStorage.setItem('batti_trip', JSON.stringify(tripItems));
+      localStorage.setItem('PPT_trip', JSON.stringify(tripItems));
     } else if (!token || tripItems.length === 0) {
-      localStorage.removeItem('batti_trip');
+      localStorage.removeItem('PPT_trip');
     }
   }, [tripItems]);
 

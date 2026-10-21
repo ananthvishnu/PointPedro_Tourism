@@ -14,7 +14,7 @@ const api = axios.create({
 });
 
 api.interceptors.request.use((config) => {
-  const token = localStorage.getItem('batti_token');
+  const token = localStorage.getItem('PPT_token');
   if (token) config.headers.Authorization = `Bearer ${token}`;
   return config;
 });
@@ -23,8 +23,8 @@ api.interceptors.response.use(
   (res) => res,
   (err) => {
     if (err.response?.status === 401) {
-      localStorage.removeItem('batti_token');
-      localStorage.removeItem('batti_user');
+      localStorage.removeItem('PPT_token');
+      localStorage.removeItem('PPT_user');
     }
     return Promise.reject(err);
   }

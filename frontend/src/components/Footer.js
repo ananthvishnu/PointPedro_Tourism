@@ -14,7 +14,7 @@ export default function Footer() {
     className="brand-logo"
   />
              PointPedro<span>Tourism</span></span>
-          <p>Your trusted guide to exploring the beautiful Batticaloa district of Sri Lanka.</p>
+          <p>Your trusted guide to exploring the beautiful Point Pedro of Sri Lanka.</p>
         </div>
         <div className="footer-links">
           <h4>Explore</h4>

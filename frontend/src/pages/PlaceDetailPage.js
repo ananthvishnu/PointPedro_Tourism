@@ -103,7 +103,7 @@ export default function PlaceDetailPage() {
               <div className="info-card"><span className="info-icon">🕗</span><div><strong>Opening Hours</strong><p>{place.openingTime} – {place.closingTime}</p></div></div>
               <div className="info-card"><span className="info-icon">💰</span><div><strong>Entrance Fee</strong><p>{place.entranceFee === 0 ? 'Free' : `Rs. ${place.entranceFee}`}</p></div></div>
               <div className="info-card"><span className="info-icon">⏱️</span><div><strong>Visit Duration</strong><p>~{place.estimatedVisitMinutes} minutes</p></div></div>
-              <div className="info-card"><span className="info-icon">📍</span><div><strong>Location</strong><p>{place.location.address || 'Batticaloa, Sri Lanka'}</p></div></div>
+              <div className="info-card"><span className="info-icon">📍</span><div><strong>Location</strong><p>{place.location.address || 'Point Pedro, Sri Lanka'}</p></div></div>
             </div>
 
             {place.safetyGuidelines?.length > 0 && (

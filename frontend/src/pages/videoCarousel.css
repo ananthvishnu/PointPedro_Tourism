@@ -82,8 +82,8 @@
 .hero-video-dot.active {
   width: 28px;
   border-radius: 10px;
-  background: #fb7185;
-  border-color: #fb7185;
+  background: #fed7aa;
+  border-color: #fed7aa;
 }
 
 .hero-video-dot:focus-visible {

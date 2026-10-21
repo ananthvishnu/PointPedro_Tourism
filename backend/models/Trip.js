@@ -9,7 +9,7 @@ const tripPlaceSchema = new mongoose.Schema({
 const tripSchema = new mongoose.Schema(
   {
     user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-    name: { type: String, default: 'My Batticaloa Trip' },
+    name: { type: String, default: 'My Point Pedro Trip' },
     date: { type: Date, default: Date.now },
     places: [tripPlaceSchema],
     totalTravelTimeMinutes: { type: Number, default: 0 },

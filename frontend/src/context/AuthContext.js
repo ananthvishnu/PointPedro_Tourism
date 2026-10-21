@@ -8,12 +8,12 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const token = localStorage.getItem('batti_token');
-    const stored = localStorage.getItem('batti_user');
+    const token = localStorage.getItem('PPT_token');
+    const stored = localStorage.getItem('PPT_user');
     if (token && stored) {
       setUser(JSON.parse(stored));
       api.get('/auth/me')
-        .then(res => { setUser(res.data.user); localStorage.setItem('batti_user', JSON.stringify(res.data.user)); })
+        .then(res => { setUser(res.data.user); localStorage.setItem('PPT_user', JSON.stringify(res.data.user)); })
         .catch(() => logout())
         .finally(() => setLoading(false));
     } else {
@@ -23,23 +23,23 @@ export function AuthProvider({ children }) {
 
   const login = async (email, password) => {
     const res = await api.post('/auth/login', { email, password });
-    localStorage.setItem('batti_token', res.data.token);
-    localStorage.setItem('batti_user', JSON.stringify(res.data.user));
+    localStorage.setItem('PPT_token', res.data.token);
+    localStorage.setItem('PPT_user', JSON.stringify(res.data.user));
     setUser(res.data.user);
     return res.data.user;
   };
 
   const register = async (name, email, password) => {
     const res = await api.post('/auth/register', { name, email, password });
-    localStorage.setItem('batti_token', res.data.token);
-    localStorage.setItem('batti_user', JSON.stringify(res.data.user));
+    localStorage.setItem('PPT_token', res.data.token);
+    localStorage.setItem('PPT_user', JSON.stringify(res.data.user));
     setUser(res.data.user);
     return res.data.user;
   };
 
   const logout = () => {
-    localStorage.removeItem('batti_token');
-    localStorage.removeItem('batti_user');
+    localStorage.removeItem('PPT_token');
+    localStorage.removeItem('PPT_user');
     setUser(null);
     // Clear selected places from trip on logout
     window.dispatchEvent(new Event('logout'));

@@ -32,7 +32,7 @@ export default function RegisterPage() {
         <div className="auth-header">
           <span className="auth-icon">🌴</span>
           <h2>Create Account</h2>
-          <p>Join Batti Tourism and start planning your trip</p>
+          <p>Join Point Pedro Tourism and start planning your trip</p>
         </div>
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">

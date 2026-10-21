@@ -60,7 +60,7 @@ export default function PlacesPage() {
     <div className="places-page">
       <div className="places-hero">
         <div className="container">
-          <h1>Explore Batticaloa</h1>
+          <h1>Explore Point Pedro</h1>
           <p>Discover {total} amazing destinations across the district</p>
           <form className="search-form" onSubmit={handleSearch}>
             <input

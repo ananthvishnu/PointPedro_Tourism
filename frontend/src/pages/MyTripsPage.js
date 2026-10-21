@@ -34,7 +34,7 @@ export default function MyTripsPage() {
       <div className="trips-hero">
         <div className="container">
           <h1>My Trips</h1>
-          <p>Your saved Batticaloa itineraries</p>
+          <p>Your saved Point Pedro itineraries</p>
           <Link to="/trip-planner" className="btn btn-secondary">+ Plan New Trip</Link>
         </div>
       </div>
@@ -43,7 +43,7 @@ export default function MyTripsPage() {
         {trips.length === 0 ? (
           <div className="empty-state">
             <h3>No saved trips yet</h3>
-            <p>Use the trip planner to create your first Batticaloa itinerary.</p>
+            <p>Use the trip planner to create your first Point Pedro itinerary.</p>
             <Link to="/trip-planner" className="btn btn-primary" style={{marginTop:'1rem'}}>Start Planning</Link>
           </div>
         ) : (
