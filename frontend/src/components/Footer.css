@@ -51,7 +51,9 @@
   transition: color 0.2s;
 }
 .footer-links a:hover { color: var(--gold); }
-
+/* .footer-info {
+gap: 0.5rem;
+} */
 .footer-info p { font-size: 0.88rem; margin-bottom: 0.25rem; }
 
 .footer-bottom {
