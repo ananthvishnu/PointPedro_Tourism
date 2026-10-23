@@ -58,7 +58,26 @@ export default function Navbar() {
                   onClick={() => setMenuOpen(false)}
                   title="View profile"
                 >
-                  👤 {user.name.split(' ')[0]}
+                  {user.profileImage ? (
+  <img
+    src={
+      user.profileImage.startsWith('http')
+        ? user.profileImage
+        : `${window.location.protocol}//${window.location.hostname}:5000${user.profileImage}`
+    }
+    alt={`${user.name}'s profile`}
+    className="nav-profile-image"
+    onError={(e) => {
+      e.currentTarget.style.display = 'none';
+    }}
+  />
+) : (
+  <span className="nav-profile-placeholder">👤</span>
+)}
+
+<span className="nav-user-name">
+  {user.name.split(' ')[0]}
+</span>
                 </Link>
                 <button className="btn btn-secondary btn-sm" onClick={handleLogout}>Logout</button>
               </div>

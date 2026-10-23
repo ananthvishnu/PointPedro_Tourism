@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: center;
   padding: 3rem 1rem;
-  background: linear-gradient(135deg, #e0f2fe 0%, var(--cream) 100%);
 }
 
 .auth-card {
@@ -113,4 +112,28 @@
     font-size: 0.65rem;
     margin-bottom: 0.75rem;
   }
+}
+
+
+
+
+.profile-image-preview {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.profile-image-preview img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #13A89E;
+  background: #F8F5EB;
+}
+
+.profile-image-preview .btn {
+  cursor: pointer;
 }

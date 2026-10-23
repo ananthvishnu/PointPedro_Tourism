@@ -29,13 +29,36 @@ export function AuthProvider({ children }) {
     return res.data.user;
   };
 
-  const register = async (name, email, password) => {
-    const res = await api.post('/auth/register', { name, email, password });
-    localStorage.setItem('PPT_token', res.data.token);
-    localStorage.setItem('PPT_user', JSON.stringify(res.data.user));
-    setUser(res.data.user);
-    return res.data.user;
-  };
+  // const register = async (name, email, password) => {
+  //   const res = await api.post('/auth/register', { name, email, password,profileImage });
+  //   localStorage.setItem('PPT_token', res.data.token);
+  //   localStorage.setItem('PPT_user', JSON.stringify(res.data.user));
+  //   setUser(res.data.user);
+  //   return res.data.user;
+  // };
+
+  
+const register = async (name, email, password, profileImage) => {
+  const formData = new FormData();
+
+  formData.append('name', name);
+  formData.append('email', email);
+  formData.append('password', password);
+
+  if (profileImage) {
+    formData.append('profileImage', profileImage);
+  }
+
+  const res = await api.post('/auth/register', formData);
+
+  localStorage.setItem('PPT_token', res.data.token);
+  localStorage.setItem('PPT_user', JSON.stringify(res.data.user));
+
+  setUser(res.data.user);
+
+  return res.data.user;
+};
+
 
   const logout = () => {
     localStorage.removeItem('PPT_token');

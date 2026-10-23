@@ -6,12 +6,12 @@ import './HomePage.css';
 import HeroVideoCarousel from './videoCarousel';
 
 const CATEGORIES = [
-  { key: 'beach', label: 'Beaches', icon: '🏖️' },
-  { key: 'heritage', label: 'Heritage', icon: '🏛️' },
-  { key: 'lagoon', label: 'Lagoons', icon: '🌊' },
-  { key: 'temple', label: 'Temples', icon: '⛩️' },
-  { key: 'park', label: 'Parks', icon: '🌿' },
-  { key: 'food', label: 'Food', icon: '🍛' },
+  { key: 'beach', label: 'Beaches', icon: '🏝️' },
+  { key: 'heritage', label: 'Heritage', icon: '🏰' },
+  { key: 'lagoon', label: 'Lagoons', icon: '🛶' },
+  { key: 'temple', label: 'Temples', icon: '🛕' },
+  { key: 'park', label: 'Nature', icon: '🌴' },
+  { key: 'food', label: 'Local Food', icon: '🍛' },
 ];
 
 export default function HomePage() {
@@ -67,16 +67,17 @@ return (
       {/* Stats */}
       <section className="stats-bar">
         <div className="container stats-inner">
-          <div className="stat"><span className="stat-num">8+</span><span>Tourist Spots</span></div>
-          <div className="stat"><span className="stat-num">5</span><span>Categories</span></div>
+          <div className="stat"><span className="stat-num">15+</span><span>Tourist Spots</span></div>
+          <div className="stat"><span className="stat-num">6</span><span>Categories</span></div>
           <div className="stat"><span className="stat-num">Free</span><span>Trip Planning</span></div>
           <div className="stat"><span className="stat-num">🗺️</span><span>Map Navigation</span></div>
         </div>
       </section>
 
+
       {/* Categories */}
       <section className="section container">
-        <h2 className="section-title">Browse by Category</h2>
+        <h2 className="section-title">Browse by Category 🧭</h2>
         <div className="categories-grid">
           {CATEGORIES.map(cat => (
             <Link key={cat.key} to={`/places?category=${cat.key}`} className="category-card">
@@ -90,7 +91,7 @@ return (
       {/* Featured Places */}
       <section className="section container">
         <div className="section-header">
-          <h2 className="section-title">Featured Destinations</h2>
+          <h2 className="section-title">Featured Destinations ⛵</h2>
           <Link to="/places" className="btn btn-secondary">View All →</Link>
         </div>
         {loading ? (

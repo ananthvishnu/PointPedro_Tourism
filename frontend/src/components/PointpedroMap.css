@@ -1,0 +1,272 @@
+
+.pp-map-section {
+  width: 100%;
+  padding: 24px;
+  background: #fffaf0;
+  border-radius: 22px;
+  box-sizing: border-box;
+  color: #073f3b;
+  font-family: Inter, Arial, sans-serif;
+  position: relative;
+
+}
+
+.pp-map-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.pp-map-eyebrow {
+  color: #0d9488;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.pp-map-heading h2 {
+  margin: 8px 0;
+  font-size: clamp(23px, 3vw, 34px);
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.pp-map-heading p {
+  margin: 0;
+  color: #647875;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.pp-map-count {
+  flex-shrink: 0;
+  padding: 9px 14px;
+  border: 1px solid #c9e9df;
+  border-radius: 30px;
+  background: #e9f8f1;
+  color: #087f72;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.pp-map-frame {
+  position: relative;
+  width: 100%;
+  height: clamp(380px, 58vw, 650px);
+  overflow: hidden;
+  border: 1px solid #cde7e2;
+  border-radius: 18px;
+  background: #91d9e8;
+  isolation: isolate;
+}
+
+.pp-leaflet-map {
+  width: 100%;
+  height: 100%;
+  background: #91d9e8;
+  z-index: 1;
+}
+
+/* Custom blue tourist location pins */
+.pp-marker-wrapper {
+  background: transparent;
+  border: 0;
+}
+
+.pp-marker {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #1675ee;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgb(0 45 90 / 30%);
+  box-sizing: border-box;
+}
+
+.pp-marker::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  bottom: -7px;
+  width: 10px;
+  height: 10px;
+  background: #1675ee;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.pp-marker-dot {
+  width: 7px;
+  height: 7px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.pp-marker-featured {
+  width: 34px;
+  height: 34px;
+  background: #073f3b;
+  border-color: #fff;
+  box-shadow: 0 0 0 5px rgb(19 184 166 / 25%),
+    0 3px 12px rgb(0 45 90 / 30%);
+}
+
+.pp-marker-featured::after {
+  background: #073f3b;
+  left: 9px;
+  bottom: -8px;
+}
+
+.pp-map-label {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 15px;
+  border: 1px solid rgb(255 255 255 / 70%);
+  border-radius: 12px;
+  background: rgb(255 255 255 / 94%);
+  color: #073f3b;
+  box-shadow: 0 3px 14px rgb(7 63 59 / 10%);
+  font-size: 12px;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.pp-live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #13b8a6;
+  box-shadow: 0 0 0 4px #d8f5ed;
+}
+
+.pp-map-attribution-note {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 500;
+  padding: 5px 8px;
+  border-top-right-radius: 7px;
+  background: rgb(255 255 255 / 90%);
+  color: #415c58;
+  font-size: 10px;
+  pointer-events: none;
+}
+
+.pp-map-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  padding: 17px 3px 0;
+  color: #53716b;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pp-popup {
+  min-width: 150px;
+  padding: 4px;
+}
+
+.pp-popup-category {
+  color: #0d9488;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.pp-popup h3 {
+  margin: 7px 0 12px;
+  color: #073f3b;
+  font-size: 16px;
+}
+
+.pp-directions-link {
+  display: inline-block;
+  padding: 9px 12px;
+  border-radius: 8px;
+  background: #073f3b;
+  color: white !important;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.pp-directions-link:hover {
+  background: #0d9488;
+}
+
+.pp-leaflet-map .leaflet-control-zoom a {
+  color: #073f3b;
+}
+
+@media (max-width: 600px) {
+  .pp-map-section {
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .pp-map-heading {
+    align-items: flex-start;
+  }
+
+  .pp-map-count {
+    padding: 7px 10px;
+    font-size: 11px;
+  }
+
+  .pp-map-frame {
+    height: 450px;
+    border-radius: 13px;
+  }
+
+  .pp-map-heading p {
+    max-width: 250px;
+    font-size: 12px;
+  }
+
+  .pp-map-footer {
+    gap: 10px 15px;
+  }
+}
+
+.pp-my-location {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  z-index: 1000;
+}
+
+.pp-my-location button {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #fa0cfe;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18);
+}
+
+.pp-my-location button:hover {
+  background: #e0f7fa;
+}
+
+.pp-my-location p {
+  padding: 8px;
+  background: white;
+  color: #fff539;
+  border-radius: 8px;
+  font-size: 12px;
+}
+

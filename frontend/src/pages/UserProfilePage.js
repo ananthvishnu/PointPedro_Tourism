@@ -66,7 +66,31 @@ export default function UserProfilePage() {
           <div className="profile-main">
             <div className="profile-card card">
               {/* Avatar */}
-              <div className="profile-avatar">{avatarText}</div>
+              {/* Profile Picture */}
+<div className="profile-avatar">
+  {user.profileImage ? (
+    <img
+      src={
+        user.profileImage.startsWith('http')
+          ? user.profileImage
+          : `${window.location.protocol}//${window.location.hostname}:5000${user.profileImage}`
+      }
+      alt={`${user.name}'s profile`}
+      className="profile-avatar-image"
+      onError={(e) => {
+        e.currentTarget.style.display = 'none';
+        e.currentTarget.nextElementSibling.style.display = 'flex';
+      }}
+    />
+  ) : null}
+
+  <div
+    className="profile-avatar-fallback"
+    style={{ display: user.profileImage ? 'none' : 'flex' }}
+  >
+    {avatarText}
+  </div>
+</div>
 
               {/* User Info */}
               <div className="profile-info">

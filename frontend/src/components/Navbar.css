@@ -260,3 +260,35 @@
     padding: 0.5rem;
   }
 }
+
+
+.nav-profile-image {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #13A89E;
+  background-color: #F8F5EB;
+  flex-shrink: 0;
+}
+
+.nav-profile-placeholder {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E9BD72;
+  flex-shrink: 0;
+}
+
+.nav-user-name {
+  white-space: nowrap;
+}
+
+.user-profile-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}

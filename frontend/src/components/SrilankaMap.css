@@ -1,23 +1,132 @@
-.srilanka-map-container {
+
+.pp-illustration {
+  --pp-teal: #0d9488;
+  --pp-deep: #075e54;
+  --pp-aqua: #d8f4f1;
+  --pp-sand: #fff5d9;
+  --pp-text: #315d59;
+
+  width: 100%;
+  padding: 48px 24px;
+  box-sizing: border-box;
+  background: linear-gradient(
+    145deg,
+    #f1fbf9 0%,
+    #ffffff 55%,
+    #fff8e8 100%
+  );
+  color: var(--pp-deep);
+}
+
+.pp-illustration-heading {
+  max-width: 720px;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.pp-illustration-eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--pp-teal);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+.pp-illustration-heading h2 {
+  margin: 0 0 12px;
+  color: var(--pp-deep);
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.15;
+  letter-spacing: -1.2px;
+}
+
+.pp-illustration-heading p {
+  max-width: 520px;
+  margin: 0 auto;
+  color: #5c7b76;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.pp-illustration-card {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(13, 148, 136, 0.15);
+  border-radius: 24px;
+  background: #d8f4f1;
+  box-shadow: 0 16px 45px rgba(20, 83, 76, 0.12);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.pp-illustration-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 55px rgba(20, 83, 76, 0.17);
+}
+
+.pp-illustration-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.pp-illustration-footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 1rem;
+  flex-wrap: wrap;
+  gap: 12px 26px;
+  max-width: 720px;
+  margin: 24px auto 0;
+  color: #47716a;
+  font-size: 12px;
+  font-weight: 600;
 }
 
-.srilanka-map-svg {
-  width: 100%;
-  max-width: 420px;
-  height: auto;
-  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.10));
+.pp-illustration-footer span {
+  padding: 9px 13px;
+  border: 1px solid rgba(13, 148, 136, 0.12);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.8);
 }
 
-.batticaloa-district {
-  transition: opacity 0.3s ease;
-  cursor: pointer;
+@media (max-width: 600px) {
+  .pp-illustration {
+    padding: 32px 14px;
+  }
+
+  .pp-illustration-heading {
+    margin-bottom: 22px;
+  }
+
+  .pp-illustration-heading p {
+    font-size: 13px;
+  }
+
+  .pp-illustration-card {
+    border-radius: 16px;
+  }
+
+  .pp-illustration-footer {
+    gap: 8px;
+  }
+
+  .pp-illustration-footer span {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
 }
 
-.batticaloa-district:hover {
-  opacity: 1 !important;
-  filter: brightness(1.15);
+@media (prefers-reduced-motion: reduce) {
+  .pp-illustration-card {
+    transition: none;
+  }
+
+  .pp-illustration-card:hover {
+    transform: none;
+  }
 }
