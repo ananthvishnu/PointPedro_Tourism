@@ -115,7 +115,7 @@ export default function AdminPlacesPage() {
               <div className="form-row">
                 <div className="form-group">
                   <label className="form-label">Place Name *</label>
-                  <input className="form-input" {...f('name')} placeholder="e.g. Kallady Beach" required />
+                  <input className="form-input" {...f('name')} placeholder="e.g. Point Pedro Beach" required />
                 </div>
                 <div className="form-group">
                   <label className="form-label">Category *</label>
