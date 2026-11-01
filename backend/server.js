@@ -51,7 +51,7 @@ app.get('/api/health', (req, res) => {
 mongoose
   .connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/PointPedro_Tourism')
   .then(() => {
-    console.log('✅ MongoDB connected');
+    console.log(`✅ MongoDB connected ${process.env.MONGODB_URI}`);
     const PORT = process.env.PORT || 5000;
     app.listen(PORT, '0.0.0.0', () => console.log(`🚀 Server running on port ${PORT}`));
   })
