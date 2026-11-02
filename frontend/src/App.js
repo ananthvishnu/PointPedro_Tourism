@@ -47,7 +47,7 @@ function AppLayout() {
           <Route path="/my-trips" element={<ProtectedRoute><MyTripsPage /></ProtectedRoute>} />
           <Route path="/profile" element={<ProtectedRoute><UserProfilePage /></ProtectedRoute>} />
           <Route path="/login" element={<LoginPage />} />
-                    <Route path="/map" element={<PointPedroMap/>} />
+          <Route path="/map" element={<PointPedroMap/>} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/admin" element={<AdminRoute><AdminDashboardPage /></AdminRoute>} />
           <Route path="/admin/places" element={<AdminRoute><AdminPlacesPage /></AdminRoute>} />

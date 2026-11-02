@@ -6,7 +6,7 @@ const { protect, adminOnly } = require('../middleware/auth');
 // GET /api/places - get all places with optional filters
 router.get('/', async (req, res) => {
   try {
-    const { category, search, page = 1, limit = 12 } = req.query;
+    const { category, search, page = 1, limit = 50 } = req.query;
     const query = { isActive: true };
 
     if (category && category !== 'all') query.category = category;

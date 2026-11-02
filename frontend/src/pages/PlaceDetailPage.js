@@ -69,8 +69,6 @@ export default function PlaceDetailPage() {
   const inTrip = isInTrip(id);
   const imgSrc = place.images?.[0]?.url || PLACEHOLDER;
   const mapUrl = `https://maps.google.com/maps?q=${place.location.latitude},${place.location.longitude}&z=15&output=embed`;
-  console.log(place.location.latitude);
-    console.log(place.location.longitude);
 
 
   return (
