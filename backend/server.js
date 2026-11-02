@@ -12,17 +12,16 @@ const app = express();
 // Middleware
 // app.use(cors());
 
-app.use(
-  cors({
-    origin: [
-      "http://localhost:3000",
-      "http://localhost:5173",
-      
-      "https://point-pedro-tourism.vercel.app"
-    ],
-    credentials: true, 
-  })
-);
+const allowedOrigins = [
+  "http://localhost:3000",
+  "http://localhost:5173",
+  "https://point-pedro-tourism.vercel.app",
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true,
+}));
 app.use(express.json());
 app.use(morgan('dev'));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
