@@ -16,7 +16,7 @@ const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:5173",
   "https://point-pedro-tourism.vercel.app",
-  "https://point-pedro-tourism-ye86.vercel.app"
+  "https://point-pedro-tourism-oesd.vercel.app/"
 ];
 
 app.use(cors({
