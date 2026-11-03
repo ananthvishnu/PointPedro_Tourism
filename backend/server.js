@@ -9,20 +9,16 @@ require('dotenv').config();
 
 const app = express();
 
-// Middleware
-// app.use(cors());
 
 const allowedOrigins = [
   "http://localhost:3000",
   "http://localhost:5173",
-  "https://point-pedro-tourism.vercel.app",
-  "https://point-pedro-tourism-oesd.vercel.app/",
-  "https://point-pedro-tourism.vercel.app/api/places?limit=6"
 ];
 
 app.use(cors({
-  origin: allowedOrigins,
-  credentials: true,
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"]
 }));
 app.use(express.json());
 app.use(morgan('dev'));
